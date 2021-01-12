@@ -1,0 +1,30 @@
+NDP452-KB2901907-x86-x64-AllOS-ENU
+
+NDP452-KB2901951-x86-x64-DevPack
+
+
+
+import arcpy
+mxd = arcpy.mapping.MapDocument(r"current")  #需要修改的mxd的路径
+df = arcpy.mapping.ListDataFrames(mxd)[0]                #该mxd下面第一个数据框
+lyr = arcpy.mapping.ListLayers(mxd, "", df)             #该数据框下所有的图层
+for ly in lyr:
+    name=ly.name                                    
+    try:
+        arcpy.AddField_management(ly, "xmmc2", "TEXT", "", "", "200")    
+        fieldName = "xmmc2"
+        expression = "'"+name+"'"
+        arcpy.CalculateField_management(ly, fieldName, expression, "PYTHON_9.3")
+    except Exception,e:
+        print e
+
+
+for lyr in arcpy.mapping.ListLayers(mxd, "", df):
+	name=lyr.name
+	try:
+		arcpy.AddField_management(lyr, "xmmc2", "TEXT", "", "", "200")
+		fieldName = "xmmc2"
+		expression = "'"+name+"'"
+		arcpy.CalculateField_management(lyr, fieldName, expression, "PYTHON_9.3")
+	except Exception,e:
+		print e
