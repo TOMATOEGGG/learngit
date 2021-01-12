@@ -3,7 +3,8 @@ Git is free software distributed under the GPL.
 Git has a mutable index called stage.
 Git tracks changes.
 Git tracks changes of files.
-²âÊÔµÚÒ»´ÎĞŞ¸Ä
-²âÊÔµÚ¶ş´ÎĞŞ¸Ä
-Éµ±Æ
-ÍÆËÍµ½Ô¶³Ì¿â
+æµ‹è¯•ç¬¬ä¸€æ¬¡ä¿®æ”¹
+æµ‹è¯•ç¬¬äºŒæ¬¡ä¿®æ”¹
+å‚»é€¼
+æ¨é€åˆ°è¿œç¨‹åº“
+æ›´æ–°åˆ°æœ¬åœ°åº“
